@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": "fda7",
+      "name": "Mayank",
+      "email": "gmayank7382@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "b4b8",
+      "name": "Mayank",
+      "email": "gmayank3232@gmail.com",
+      "password": "45454545"
+    },
+    {
+      "id": "ba60",
+      "name": "mayank",
+      "email": "jk@gmail.com",
+      "password": "Test@123"
+    }
+  ]
+}

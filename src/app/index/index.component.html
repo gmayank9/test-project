@@ -1,0 +1,210 @@
+<div class="min-h-screen bg-gray-100">
+  <!-- Header Section -->
+  <mat-toolbar color="primary" class="text-white py-2 text-sm">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <span>
+        Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+        <a mat-button href="#" class="underline">ShopNow</a>
+      </span>
+      <span>English <mat-icon>arrow_drop_down</mat-icon></span>
+    </div>
+  </mat-toolbar>
+  <!-- Navbar -->
+  <mat-toolbar
+    color="accent"
+    class="p-4 shadow flex justify-between items-center"
+  >
+    <!-- Logo -->
+    <div class="text-xl font-bold">Exclusive</div>
+
+    <!-- Navigation Links -->
+    <div class="flex space-x-6">
+      <a mat-button href="#">Home</a>
+      <a mat-button href="#">Contact</a>
+      <a mat-button href="#">About</a>
+      <a mat-button href="#">Sign Up</a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="relative">
+      <mat-form-field appearance="fill">
+        <mat-label>What are you looking for?</mat-label>
+        <input matInput placeholder="Search" />
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+    </div>
+  </mat-toolbar>
+
+  <!-- Main Section -->
+  <section class="py-8 bg-gray-100">
+    <div class="container mx-auto grid grid-cols-12 gap-4">
+      <!-- Side Navbar -->
+      <aside class="col-span-3 bg-white p-4 shadow rounded">
+        <mat-nav-list>
+          <a mat-list-item href="#">Woman's Fashion</a>
+          <a mat-list-item href="#">Men's Fashion</a>
+          <a mat-list-item href="#">Electronics</a>
+          <a mat-list-item href="#">Home & Lifestyle</a>
+          <a mat-list-item href="#">Medicine</a>
+          <a mat-list-item href="#">Sports & Outdoor</a>
+          <a mat-list-item href="#">Baby's & Toys</a>
+          <a mat-list-item href="#">Groceries & Pets</a>
+          <a mat-list-item href="#">Health & Beauty</a>
+        </mat-nav-list>
+      </aside>
+
+      <!-- Carousel / Banner Section -->
+      <div class="col-span-9 bg-black text-white p-8 rounded">
+        <h2 class="text-4xl font-bold">iPhone 14 Series</h2>
+        <p class="mt-4 text-lg">Up to 10% off Voucher</p>
+        <a mat-raised-button color="accent" class="mt-6 inline-block" href="#"
+          >Shop Now</a
+        >
+        <!-- Carousel Navigation -->
+        <div class="mt-8 flex justify-between items-center">
+          <button mat-icon-button color="accent">
+            <mat-icon>chevron_left</mat-icon>
+          </button>
+          <div class="flex space-x-2">
+            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+            <div class="w-3 h-3 bg-gray-400 rounded-full"></div>
+            <div class="w-3 h-3 bg-gray-400 rounded-full"></div>
+          </div>
+          <button mat-icon-button color="accent">
+            <mat-icon>chevron_right</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Today's Flash Sales Section -->
+  <!-- <section class="py-16 bg-gray-100">
+    <div class="container mx-auto"> -->
+  <!-- Section Header -->
+  <!-- <div class="flex items-center justify-between mb-6">
+        <h2 class="text-3xl font-bold">Today's Flash Sales</h2>
+        <div class="flex space-x-4 text-red-500">
+          <div class="text-center">
+            <span class="block text-2xl font-bold">{{ countdown.days }}</span>
+            <span>Days</span>
+          </div>
+          <div class="text-center">
+            <span class="block text-2xl font-bold">{{ countdown.hours }}</span>
+            <span>Hours</span>
+          </div>
+          <div class="text-center">
+            <span class="block text-2xl font-bold">{{
+              countdown.minutes
+            }}</span>
+            <span>Minutes</span>
+          </div>
+          <div class="text-center">
+            <span class="block text-2xl font-bold">{{
+              countdown.seconds
+            }}</span>
+            <span>Seconds</span>
+          </div>
+        </div>
+      </div> -->
+
+  <!-- Products Grid -->
+  <!-- <mat-grid-list cols="5" rowHeight="1:1" gutterSize="16px">
+        <mat-grid-tile *ngFor="let product of flashSales">
+          <mat-card class="bg-white shadow rounded">
+
+            <img
+              mat-card-image
+              [src]="product.image"
+              alt="Product 1"
+              class="rounded-t"
+              [width]="product.width"
+              [height]="product.height"
+            />
+            <mat-card-content>
+              <h3 class="text-lg font-bold mb-2">{{ product.name }}</h3>
+              <p class="text-red-500">
+                ${{ product.price }}
+                <span class="line-through text-gray-400"
+                  >{{ product.oldPrice }}
+                </span>
+              </p>
+              <div class="text-sm text-gray-500">
+                ({{ product.rating }} ratings)
+              </div>
+            </mat-card-content>
+            <mat-card-actions>
+              <button
+                mat-button
+                color="accent"
+                class="w-full"
+                (click)="addToCart(product)"
+              >
+                Add to Cart
+              </button>
+            </mat-card-actions>
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list> -->
+
+  <!-- View All Button -->
+  <!-- <div class="text-center mt-8">
+        <a mat-raised-button color="accent" class="px-8 py-3" href="#"
+          >View All Products</a
+        >
+      </div>
+    </div>
+  </section>
+</div> -->
+
+  <!-- Flash Sales Section -->
+  <div class="container mx-auto px-16 py-10">
+    <!-- Section Header -->
+    <h2 class="text-3xl font-bold mb-6">Today's Flash Sales</h2>
+
+    <!-- Product Grid -->
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"
+    >
+      @for (flash of flashSales; track $index) {
+      <mat-card class="bg-white shadow-lg rounded-lg p-4">
+        <!-- Image Container -->
+        <div class="flex justify-center">
+          <img
+            mat-card-image
+            [src]="flash.image"
+            alt="{{ flash.name }}"
+            class="h-52 w-full object-cover rounded"
+          />
+        </div>
+
+        <!-- Card Content -->
+        <mat-card-content class="text-center">
+          <h3 class="text-lg font-bold mt-3">{{ flash.name }}</h3>
+          <p class="text-red-500 text-lg font-semibold">
+            ${{ flash.price }}
+            <span class="text-gray-400 line-through text-sm"
+              >${{ flash.oldPrice }}</span
+            >
+          </p>
+          <p class="text-gray-500 text-sm">({{ flash.rating }} ratings)</p>
+        </mat-card-content>
+
+        <!-- Card Actions -->
+        <mat-card-actions class="flex justify-center">
+          <button mat-raised-button color="accent" class="w-full">
+            Add to Cart
+          </button>
+        </mat-card-actions>
+      </mat-card>
+      }
+    </div>
+
+    <!-- View All Button -->
+    <div class="text-center mt-8">
+      <a mat-raised-button color="accent" class="px-8 py-3" href="#"
+        >View All Products</a
+      >
+    </div>
+  </div>
+</div>
